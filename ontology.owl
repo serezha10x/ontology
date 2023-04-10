@@ -1,0 +1,664 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#"
+     xml:base="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#canBeUsedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#canBeUsedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Document"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Discipline"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#hasDocumentPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#hasDocumentPart">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Document"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#PartOfDocumentStructure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#isAuthor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#isAuthor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#wasPublishedOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#wasPublishedOn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Article"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#ScientificEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#annotationValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#annotationValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#value"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Annotation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#articleAreaValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#articleAreaValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#value"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#ArticleArea"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#articleName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#articleName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#documentName"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#contactValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#contactValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#value"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Contact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#disciplineName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#disciplineName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#name"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Discipline"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#documentName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#documentName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#name"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#firstName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#personName"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#id">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#keyWordValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#keyWordValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#value"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#KeyWord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#linkValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#linkValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#value"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Link"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#manualName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#manualName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#documentName"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#name"/>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#personName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#personName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#name"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#purposeValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#purposeValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#value"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Purpose"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#scientificEventName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#scientificEventName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#name"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#ScientificEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#secondName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#secondName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#personName"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#subtitleValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#subtitleValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#value"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Subtitle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#surname -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#surname">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#personName"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#topicValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#topicValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#value"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Topic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#udcValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#udcValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#value"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#UDC"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#value -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#value"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Annotation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Annotation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#PartOfDocumentStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Area1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Area1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#ArticleArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Area2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Area2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#ArticleArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Area3 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Area3">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#ArticleArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Article -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Article">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#ArticleArea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#ArticleArea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#PartOfDocumentStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Contact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Contact">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#PartOfDocumentStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Discipline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Discipline"/>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Document -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Document"/>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#KeyWord -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#KeyWord">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#PartOfDocumentStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Link -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Link">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#PartOfDocumentStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Manual -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Manual">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#PartOfDocumentStructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#PartOfDocumentStructure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Purpose -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Purpose">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#PartOfDocumentStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#ScientificEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#ScientificEvent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Subtitle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Subtitle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#PartOfDocumentStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Topic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Topic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#PartOfDocumentStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#UDC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#UDC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#PartOfDocumentStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Chaika -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Chaika">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Person"/>
+        <firstName>Валера</firstName>
+        <secondName>Чайка</secondName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Petrov -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Petrov">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Person"/>
+        <firstName>Виктор</firstName>
+        <secondName>Петров</secondName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#ararea1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#ararea1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Area1"/>
+        <articleAreaValue>Направление №1: ИС, АСУ, СППР</articleAreaValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#ararea2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#ararea2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Area2"/>
+        <articleAreaValue>Направление №2: Web, Дизайн, Моделирование</articleAreaValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#ararea3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#ararea3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Area3"/>
+        <articleAreaValue>Направление №3: Алгоритмы, Методы, ИИ</articleAreaValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#area1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#area1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Area1"/>
+        <articleAreaValue>Направление 1</articleAreaValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#art1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#art1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Article"/>
+        <hasDocumentPart rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#area1"/>
+        <isAuthor rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Chaika"/>
+        <articleName>РАЗРАБОТКА ОНТОЛОГИЧЕСКОЙ МОДЕЛИ ИНФОРМАЦИОННОЙ СИСТЕМЫ ФОРМИРОВАНИЯ БАЗЫ ЗНАНИЙ НАУЧНО-ТЕХНИЧЕСКИХ И УЧЕБНО-МЕТОДИЧЕСКИХ РАЗРАБОТОК</articleName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#art2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#art2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Article"/>
+        <hasDocumentPart rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#area1"/>
+        <isAuthor rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Petrov"/>
+        <articleName>РАЗРАБОТКА OWL-ОНТОЛОГИИ ОБРАЗОВАТЕЛЬНЫХ РЕСУРСОВ СГТУ</articleName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#art3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#art3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Article"/>
+        <isAuthor rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Chaika"/>
+        <articleName>ОБЗОР СРЕДСТВ РАЗРАБОТКИ ОНТОЛОГИЧЕСКИХ МОДЕЛЕЙ</articleName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#author1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#author1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Person"/>
+        <firstName>Светлана</firstName>
+        <secondName>Юрьевна</secondName>
+        <surname>Землянская</surname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#disc1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#disc1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Discipline"/>
+        <disciplineName>ООП</disciplineName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#disc2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#disc2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Discipline"/>
+        <disciplineName>Web-технологии</disciplineName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#disc3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#disc3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Discipline"/>
+        <disciplineName>СУБД</disciplineName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#disc4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#disc4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Discipline"/>
+        <disciplineName>ОС</disciplineName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#event1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#event1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#ScientificEvent"/>
+        <scientificEventName>ИУСКМ-21</scientificEventName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#header1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#header1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Subtitle"/>
+        <subtitleValue>Аннотация:</subtitleValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#header2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#header2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Subtitle"/>
+        <subtitleValue>Annotation:</subtitleValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#header3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#header3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Subtitle"/>
+        <subtitleValue>Введение</subtitleValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#header4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#header4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Subtitle"/>
+        <subtitleValue>Выводы</subtitleValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#header5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#header5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Subtitle"/>
+        <subtitleValue>Литература</subtitleValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#link1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#link1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Link"/>
+        <linkValue>Донецкий национальный технический университет. Международная научно-техническая конференция «Информатика, управляющие системы, математическое и компьютерное моделирование» Интернет-ресурс. - Режим доступа: www/ URL: http://iuskm.donntu.org/elektronnyj-arxiv-konferencii/</linkValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#udc1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#udc1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#UDC"/>
+        <udcValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">004.853</udcValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Chaika"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#Petrov"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#area1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#art1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#art2"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valer/ontologies/2021/2/diplom_onto#art3"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
